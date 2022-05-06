@@ -116,10 +116,20 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	//Traverse the tree in an preorder fashion
 	//Print the current node first and then recurse on the children
 	public void preOrder() {
-		System.out.println("PreOrder test commit"); 
+		preOrderRecurse(root);
 	}
 	
 	private void preOrderRecurse(BSTNode<T> node) {
+		if(node==null)
+		{
+			return;
+		}
+		else
+		{
+			System.out.print(node + ", ");
+			preOrderRecurse(node.leftChild);
+			preOrderRecurse(node.rightChild);
+		}
 		
 	}
 	
@@ -136,10 +146,26 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	//then recursively print the right side of current node
 	//For a bst this will print the values in sorted order from smallest to largest
 	public void inOrder() {
+		inOrderRecurse(root);
 		System.out.println("InOrder test commit"); 
+		inOrderRecurse(root);
 	}
 	
-	public void inOrderRecurse(BSTNode<T> node) {
+	public void inOrderRecurse(BSTNode<T> node) 
+	{
+		
+		if(node == null)
+		{
+			return; 
+		}
+		else
+		{
+			inOrderRecurse(node.leftChild);
+			
+			System.out.print(node.data + " ");
+			
+			inOrderRecurse(node.rightChild);
+		}
 		
 	}
 	//Traverse the tree in an inorder fashion but using a stack
@@ -152,6 +178,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	//Traverse the tree in an postorder fashion
 	//Recurse on the children and then print the value in the current node
 	public void postOrder() {
+		postOrderRecurse(root);
 		System.out.println("Post Order test commit");
 		postOrderRecurse(root);
 	}
@@ -213,22 +240,39 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		bst.insert(15);
 		bst.insert(10);
 		bst.insert(3);
-		System.out.println(bst);
+//		System.out.println(bst);
 	
-		System.out.println("In Order Traversals");
+<<<<<<< HEAD
+//		System.out.println("In Order Traversals");
 		bst.inOrder();
-		System.out.println();
-		bst.inOrderStack();
-		System.out.println();
+//		System.out.println();
+//		bst.inOrderStack();
+//		System.out.println();
+//		System.out.println("Pre Order Traversals");
+//		bst.preOrder();
+//		System.out.println();
+//		bst.preOrderStack();
+//		System.out.println();
+//		System.out.println("Post Order Traversals");
+//		bst.postOrder();
+//		System.out.println();
+//		bst.postOrderStack();
+=======
+		//System.out.println("In Order Traversals");
+		//bst.inOrder();
+		//System.out.println();
+		//bst.inOrderStack();
+		//System.out.println();
 		System.out.println("Pre Order Traversals");
 		bst.preOrder();
-		System.out.println();
-		bst.preOrderStack();
-		System.out.println();
-		System.out.println("Post Order Traversals");
-		bst.postOrder();
-		System.out.println();
-		bst.postOrderStack();
+		//System.out.println(bst);
+		//bst.preOrderStack();
+		//System.out.println();
+		//System.out.println("Post Order Traversals");
+		//bst.postOrder();
+		//System.out.println();
+		//bst.postOrderStack();
+>>>>>>> f84601231795323d83aa8ca0bce9d6d66569b6ac
 		
 		
 	}
