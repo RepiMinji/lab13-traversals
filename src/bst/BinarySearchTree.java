@@ -177,7 +177,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	
 	//Traverse the tree in an postorder fashion
 	//Recurse on the children and then print the value in the current node
-	public void postOrder() {
+	public void postOrder()
+	{
 		postOrderRecurse(root);
 		System.out.println("Post Order test commit");
 		postOrderRecurse(root);
@@ -198,21 +199,39 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	//This is more difficult than the other traversals using a Stack
 	//I suggest using two stacks. Think about the order you want the elements
 	//to appear on the stack you will print.
-	public void postOrderStack() {
+	public void postOrderStack()
+	{
 		Stack<BSTNode<T>> post = new Stack<>();
 		Stack<BSTNode<T>> postHelper = new Stack<>();
-		if(root!=null) {
+		if(root!=null)
+		{
 			postHelper.push(root);
-			while(!postHelper.isEmpty()) {
+			while(!postHelper.isEmpty())
+			{
 				//how should post and postHelper be updated?
+				BSTNode<T> temp = postHelper.pop();
+				post.push(temp);
+				
+				if (temp.leftChild != null) {
+					postHelper.push(temp.leftChild);
+					
+				}
+				
+				if (temp.rightChild != null) {
+					postHelper.push(temp.rightChild);
+				}
+				
+				
+				
+				
 			}
 			
-			while(!post.isEmpty()) {
+			while(!post.isEmpty())
+			{
 				BSTNode<T> node = post.pop();
 				System.out.print(node + " ");
 			}
 		}
-
 	}
 	
 	public String toString() {
@@ -242,9 +261,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		bst.insert(3);
 //		System.out.println(bst);
 	
-<<<<<<< HEAD
 //		System.out.println("In Order Traversals");
-		bst.inOrder();
+//		bst.inOrder();
 //		System.out.println();
 //		bst.inOrderStack();
 //		System.out.println();
@@ -256,15 +274,15 @@ public class BinarySearchTree<T extends Comparable<T>> {
 //		System.out.println("Post Order Traversals");
 //		bst.postOrder();
 //		System.out.println();
-//		bst.postOrderStack();
-=======
+		bst.postOrderStack();
+
 		//System.out.println("In Order Traversals");
 		//bst.inOrder();
 		//System.out.println();
 		//bst.inOrderStack();
 		//System.out.println();
-		System.out.println("Pre Order Traversals");
-		bst.preOrder();
+		//System.out.println("Pre Order Traversals");
+		//bst.preOrder();
 		//System.out.println(bst);
 		//bst.preOrderStack();
 		//System.out.println();
@@ -272,7 +290,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		//bst.postOrder();
 		//System.out.println();
 		//bst.postOrderStack();
->>>>>>> f84601231795323d83aa8ca0bce9d6d66569b6ac
+
 		
 		
 	}
