@@ -161,7 +161,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	//For a bst this will print the values in sorted order from smallest to largest
 	public void inOrder() {
 		inOrderRecurse(root);
-		inOrderRecurse(root);
 	}
 	
 	public void inOrderRecurse(BSTNode<T> node) 
@@ -204,7 +203,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	//Traverse the tree in an postorder fashion
 	//Recurse on the children and then print the value in the current node
 	public void postOrder() {
-		postOrderRecurse(root);
 		postOrderRecurse(root);
 	}
 	
