@@ -126,17 +126,27 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		}
 		else
 		{
-			System.out.print(node + ", ");
+			System.out.print(node + " ");
 			preOrderRecurse(node.leftChild);
 			preOrderRecurse(node.rightChild);
 		}
 		
 	}
-	
+	               
 	//Traverse the tree in an preorder fashion but using a stack
 	//Print the current node first and then recurse on the children
 	public void preOrderStack() {
 		Stack<BSTNode<T>> pre = new Stack<BSTNode<T>>();
+		BSTNode<T> current = root;
+		while(current != null)
+		{
+			while(current != null)
+			{
+				pre.push(current);
+				current = current.leftChild;
+			}
+		}
+		
 		
 	}
 		
@@ -253,6 +263,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		bst.insert(15);
 		bst.insert(10);
 		bst.insert(3);
+<<<<<<< HEAD
 		System.out.println(bst);
 
 		System.out.println("In Order Traversals");
@@ -260,16 +271,51 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		System.out.println();
 		bst.inOrderStack();
 		System.out.println();
+=======
+//		System.out.println(bst);
+	
+
+//		System.out.println("In Order Traversals");
+		//bst.inOrder();
+//		System.out.println();
+//		bst.inOrderStack();
+//		System.out.println();
+//		System.out.println("Pre Order Traversals");
+//		bst.preOrder();
+//		System.out.println();
+//		bst.preOrderStack();
+//		System.out.println();
+//		System.out.println("Post Order Traversals");
+//		bst.postOrder();
+//		System.out.println();
+//		bst.postOrderStack();
+
+		//System.out.println("In Order Traversals");
+		//bst.inOrder();
+		//System.out.println();
+		//bst.inOrderStack();
+		//System.out.println();
+>>>>>>> 4575b432971086db3a19ce78caf2c1503a25ce6e
 		System.out.println("Pre Order Traversals");
 		bst.preOrder();
 		System.out.println();
 		bst.preOrderStack();
+<<<<<<< HEAD
 		System.out.println();
 		System.out.println("Post Order Traversals");
 		bst.postOrder();
 		System.out.println();
 		bst.postOrderStack();
 
+=======
+		//System.out.println();
+		//System.out.println("Post Order Traversals");
+		//bst.postOrder();
+		//System.out.println();
+		//bst.postOrderStack();
+
+		
+>>>>>>> 4575b432971086db3a19ce78caf2c1503a25ce6e
 		
 	}
 	
