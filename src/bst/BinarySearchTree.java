@@ -265,7 +265,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		bst.insert(15);
 		bst.insert(10);
 		bst.insert(3);
-<<<<<<< HEAD
+
 		System.out.println(bst);
 
 		System.out.println("In Order Traversals");
@@ -273,68 +273,16 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		System.out.println();
 		bst.inOrderStack();
 		System.out.println();
-=======
-<<<<<<< HEAD
-		System.out.println(bst);
-
-		System.out.println("In Order Traversals");
-		bst.inOrder();
-		System.out.println();
-		bst.inOrderStack();
-		System.out.println();
-=======
-//		System.out.println(bst);
-	
-
-//		System.out.println("In Order Traversals");
-		//bst.inOrder();
-//		System.out.println();
-//		bst.inOrderStack();
-//		System.out.println();
-//		System.out.println("Pre Order Traversals");
-//		bst.preOrder();
-//		System.out.println();
-//		bst.preOrderStack();
-//		System.out.println();
-//		System.out.println("Post Order Traversals");
-//		bst.postOrder();
-//		System.out.println();
-//		bst.postOrderStack();
-
-		//System.out.println("In Order Traversals");
-		//bst.inOrder();
-		//System.out.println();
-		//bst.inOrderStack();
-		//System.out.println();
->>>>>>> 4575b432971086db3a19ce78caf2c1503a25ce6e
->>>>>>> f9332991095a9a6ce621ed8e7a489ab974d249e9
 		System.out.println("Pre Order Traversals");
 		bst.preOrder();
 		System.out.println();
 		bst.preOrderStack();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f9332991095a9a6ce621ed8e7a489ab974d249e9
 		System.out.println();
 		System.out.println("Post Order Traversals");
 		bst.postOrder();
 		System.out.println();
 		bst.postOrderStack();
-<<<<<<< HEAD
-=======
 
-=======
-		//System.out.println();
-		//System.out.println("Post Order Traversals");
-		//bst.postOrder();
-		//System.out.println();
-		//bst.postOrderStack();
->>>>>>> f9332991095a9a6ce621ed8e7a489ab974d249e9
-
-		
->>>>>>> 4575b432971086db3a19ce78caf2c1503a25ce6e
-		
 	}
 	
 
